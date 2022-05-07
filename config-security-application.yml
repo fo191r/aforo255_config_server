@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    # Para hacer la conexion a BD por medio de docker se indica el nombre del contenedor y el puerto del contenedor
+    # siempre y cuando esten en la misma red
+    url: jdbc:mysql://database-mysql:3306/db_security
+    username: root
+    password: Aforo255#2019
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+jwt:
+  secret: Key#SuperSecret$Aforo2SS#JavaMicroservices#987654321

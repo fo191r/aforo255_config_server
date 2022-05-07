@@ -18,3 +18,5 @@ spring:
       properties:
          bootstrap:
              servers: "kafka-queue:29092"
+  zipkin:
+    base-url: http://service-tracer:9411

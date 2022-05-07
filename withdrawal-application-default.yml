@@ -3,7 +3,6 @@ spring:
     url: jdbc:postgresql://database-postgres:5432/db_account
     username: postgres
     password: Aforo255#2019
-
   jpa:
     hibernate:
       ddl-auto: update
@@ -19,3 +18,5 @@ spring:
       properties:
         bootstrap:
           servers: "kafka-queue:29092"
+  zipkin:
+    base-url: http://service-tracer:9411

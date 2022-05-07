@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://database-postgres:5432/db_account
+    username: postgres
+    password: Aforo255#2019
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  kafka:
+    template:
+      default-topic: transaction-topic
+    producer:
+      bootstrap-servers: kafka-queue:29092
+      key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    admin:
+      properties:
+         bootstrap:
+             servers: "kafka-queue:29092"

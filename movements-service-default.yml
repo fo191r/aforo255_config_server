@@ -13,3 +13,8 @@ spring:
       properties:
         bootstrap:
           servers: "kafka-queue:29092"
+  redis:
+	host: database-redis
+	port: 6379
+	password: Aforo255#2019
+      timeout; 10000

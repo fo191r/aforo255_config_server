@@ -1,2 +1,15 @@
 spring:
-  data: mongodb.uri.
+  data:
+    mongodb:
+      uri: mongodb://aforo255:Aforo255#2019@database-mongo:27017/db_movement?authSource=admin
+  kafka:
+    template:
+      default-topic: transaction-topic
+    producer:
+      bootstrap-servers: kafka-queue:29092
+      key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    admin:
+      properties:
+        bootstrap:
+          servers: "kafka-queue:29092"
